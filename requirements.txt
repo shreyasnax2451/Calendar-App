@@ -1,3 +1,5 @@
 streamlit_calendar
 streamlit
 sqlalchemy
+schedule
+smtplib

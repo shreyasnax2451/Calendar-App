@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_calendar import calendar
 import datetime
 from src.main import get_tasks_data, shift_task
-from streamlit_js_eval import streamlit_js_eval
+# from streamlit_js_eval import streamlit_js_eval
 
 st.set_page_config(page_title="Calendar App")
 
