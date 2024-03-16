@@ -64,6 +64,7 @@ def add_task_data(task_data):
     session.add(new_user)
     session.commit()
     session.close()
+    return True
 
 def edit_task(**task_data):
     """ Edit the priority of a Task"""
