@@ -99,8 +99,8 @@ def shift_task():
             msg = f"Subject:Important Update: Tasks Deadline Moved\n\n{email_body}"
         )
 
-schedule.every().day.at("22:00").do(shift_task)
+# schedule.every().day.at("22:00").do(shift_task)
 
-while True:
-    schedule.run_pending()
-    time.sleep(10)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(10)
