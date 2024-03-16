@@ -76,8 +76,6 @@ def edit_task(**task_data):
     session.close()
 
 def shift_task():
-    # email = 'shreyasnax2451@gmail.com'
-    # password = "rewcpxslqbfgajod"
     email = 'Your_email'
     password = 'Your Password'
 
