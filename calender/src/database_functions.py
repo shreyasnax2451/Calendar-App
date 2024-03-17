@@ -75,10 +75,11 @@ def edit_task(**task_data):
         task.is_completed = True
     session.commit()
     session.close()
+    return True
 
 def shift_task():
-    email = 'Your_email'
-    password = 'Your Password'
+    email = 'Your_Email'
+    password = 'Your_Password'
 
     tasks_data = session.query(Task).filter(Task.is_completed == False).all()
     task_titles = []
@@ -100,7 +101,7 @@ def shift_task():
             msg = f"Subject:Important Update: Tasks Deadline Moved\n\n{email_body}"
         )
 
-# schedule.every().day.at("22:00").do(shift_task)
+# schedule.every().day.at("00:00").do(shift_task)
 
 # while True:
 #     schedule.run_pending()

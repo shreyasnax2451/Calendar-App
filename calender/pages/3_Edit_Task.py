@@ -1,5 +1,5 @@
 import streamlit as st
-from src.main import get_tasks_data, edit_task
+from src.database_functions import get_tasks_data, edit_task
 
 tasks = (task['title'] for task in get_tasks_data())
 option = st.selectbox(
@@ -11,7 +11,7 @@ option = st.selectbox(
 
 task_edit = st.selectbox(
    "How do you want to edit the task?",
-   ('Change Priority','Change Task Status'),
+   ('Change Priority','Change Task Status to completed'),
    index=None,
    placeholder="Select Task...",
 )
@@ -28,5 +28,8 @@ else:
     is_completed = True
 
 if st.button('Edit Task'):
-    edit_task(task_name = option, priority = priority, is_completed = is_completed)
-    st.rerun()
+    edited = edit_task(task_name = option, priority = priority, is_completed = is_completed)
+    if edited:
+        st.success("Task Edited in Calendar!")
+    else:
+        st.error('Task Not Edited!')

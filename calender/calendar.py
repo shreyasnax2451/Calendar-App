@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_calendar import calendar
 import datetime
-from src.main import get_tasks_data
+from src.database_functions import get_tasks_data
 
 st.set_page_config(page_title="Calendar App")
 
@@ -78,9 +78,3 @@ state = calendar(
     """,
     key=mode,
 )
-
-# if state.get("eventsSet") is not None:
-#     st.session_state["events"] = state["eventsSet"]
-
-# if st.button("Reload page"):
-#     streamlit_js_eval(js_expressions="parent.window.location.reload()")

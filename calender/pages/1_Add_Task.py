@@ -1,6 +1,6 @@
 import streamlit as st
 import datetime
-from src.main import add_task_data
+from src.database_functions import add_task_data
 
 start_date = datetime.datetime.now()
 end_date = datetime.datetime.now()
